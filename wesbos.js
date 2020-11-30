@@ -36,7 +36,12 @@ function displayMatches(e) {
       );
       return `<li>
                 <span class="name">${countryName}, ${capitalName}</span>
-                <span class="population">${numberWitit 
+                <span class="population">${numberWithCommas(place.population)}</span>
+              </li>`;
+    })
+    .join("");
+  
+  suggestions.innerHTML = html;
 }
 
 searchInput.addEventListener("change", displayMatches);
